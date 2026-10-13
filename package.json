@@ -1,0 +1,57 @@
+{
+    "name": "three-renderstats",
+    "version": "0.1.0",
+    "description": "Lightweight three.js renderer stats overlay: draw calls, materials, memory, render targets. Works with OffscreenCanvas workers.",
+    "type": "module",
+    "license": "MIT",
+    "author": "Pavel Mazhuga",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/pavel-mazhuga/three-renderstats.git"
+    },
+    "homepage": "https://github.com/pavel-mazhuga/three-renderstats#readme",
+    "bugs": {
+        "url": "https://github.com/pavel-mazhuga/three-renderstats/issues"
+    },
+    "keywords": [
+        "three",
+        "three.js",
+        "webgl",
+        "stats",
+        "renderer",
+        "draw-calls",
+        "offscreencanvas"
+    ],
+    "sideEffects": false,
+    "files": [
+        "dist",
+        "src"
+    ],
+    "main": "./dist/index.js",
+    "module": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.js"
+        }
+    },
+    "scripts": {
+        "build": "tsup",
+        "prepare": "tsup",
+        "typecheck": "tsc --noEmit",
+        "example": "npm run dev --prefix examples"
+    },
+    "peerDependencies": {
+        "three": ">=0.160.0"
+    },
+    "devDependencies": {
+        "@types/three": "^0.186.0",
+        "three": "^0.186.1",
+        "tsup": "^8.5.0",
+        "typescript": "^5.9.3"
+    },
+    "engines": {
+        "node": ">=18"
+    }
+}
